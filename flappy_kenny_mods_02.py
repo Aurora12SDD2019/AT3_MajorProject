@@ -12,8 +12,8 @@ __status__ = "Alpha"
 
 
 """ revision notes:
-02: defines a moves_towards method of Kenny class. The kenny moves half wat towards
-    where the mouse was clickes, if clickes on the game window
+02: defines a moves_towards method of Kenny class. The kenny moves half way towards
+    where the mouse was clicked, if clicked on the game window
 01: sets up the basic Kenny class. The important stiff is done in the
     __init__ function which sets up the default values of the object,
     and the show function which places it on the screen.
@@ -46,7 +46,7 @@ class Kenny(object):
         self.window = window
         self.position = [100, 100]
         self.image = P.image.load("media\kenny.gif").convert() #render the image
-        self.show()
+        #self.show()
 
 
     def show(self):
@@ -65,10 +65,16 @@ class Kenny(object):
             position: an integer array [x, y] 
         """
         
-        delta_x = (position[0] - self.position[0])/2
-        delta_y = (position[1] - self.position[1])/2
-        self.position = [self.position[0]+delta_x, self.position[1]+delta_y]
-        self.show()
+        current_x = self.position[0] #where kenny is now
+        current_y = self.position[1]
+        mouse_x = position[0]  #where the mouse was clicked
+        mouse_y = position[1]
+        change_x = (mouse_x - current_x)/2  #halfway between the two
+        change_y = (mouse_y - current_y)/2
+        new_x = current_x + change_x  #new position
+        new_y = current_y + change_y
+        self.position = [new_x, new_y]
+        #self.show()
 
 # templates copy and paste these for your own function and class definitions
 def function_name(arg1, arg2, other_silly_variable=None):

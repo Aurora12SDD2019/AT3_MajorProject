@@ -13,7 +13,7 @@ __status__ = "Alpha"
 
 """ revision notes:
 01 creates a 'kenny' object with a default position of 100, 100 on line 41
-02 moves kenny halfway towards the mouse when game_window clicked
+02 moves kenny halfway towards the mouse when game_window clicked line 58
 
 """
 
