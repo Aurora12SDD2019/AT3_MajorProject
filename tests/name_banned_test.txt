@@ -1,0 +1,8 @@
+name	expected
+fred	False
+Fred	False
+poo	True
+arse	True
+Arse	True
+mister42	"You cant use numbers"
+sister69	True
